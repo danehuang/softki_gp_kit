@@ -1,0 +1,25 @@
+defaults:
+    - gp/softki/config
+    - gp/svgp/config
+    - gp/sgpr/config
+
+model: softki
+
+data_dir: data/uci_datasets/uci_datasets
+
+dataset:
+    name: pol
+    num_workers: 1
+    train_frac: 0.9
+    val_frac: 0.0
+
+synthetic:
+    N: 1000
+
+wandb:
+    watch: false
+    group: test
+    entity: test
+    project: test
+
+draw: false

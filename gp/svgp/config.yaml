@@ -1,0 +1,22 @@
+model:
+    name: svgp
+    kernel:
+        _target_: RBFKernel
+        ard_num_dims: null
+    use_ard: true
+    use_scale: true
+    lengthscale: 1
+    num_inducing: 1024
+    induce_init: kmeans
+    noise: 0.5
+    noise_constraint: 0.1
+    learn_noise: true
+    dtype: float32
+    device: cpu
+    mll_type: PLL
+
+training:
+    seed: 42
+    batch_size: 1024
+    learning_rate: 0.01
+    epochs: 50

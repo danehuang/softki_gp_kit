@@ -1,0 +1,20 @@
+model:
+    name: sgpr
+    kernel:
+        _target_: RBFKernel
+        ard_num_dims: null
+        nu: 1.5
+    use_ard: false
+    use_scale: true
+    num_inducing: 512
+    induce_init: kmeans
+    noise: 0.5
+    noise_constraint: 1e-4
+    learn_noise: true
+    dtype: float32
+    device: cpu
+
+training:
+    seed: 42
+    learning_rate: 0.1
+    epochs: 50
