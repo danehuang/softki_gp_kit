@@ -1,0 +1,19 @@
+model:
+    name: dexact
+    kernel:
+        _target_: RBFKernelGrad
+        ard_num_dims: null
+    use_scale: true
+    use_ard: true
+    noise: 0.5
+    noise_constraint: 0.1
+    learn_noise: true
+    dtype: float32
+    device: cpu
+    max_cg_iters: 50
+    cg_tolerance: 0.001
+
+training:
+    seed: 42
+    learning_rate: 0.1
+    epochs: 50

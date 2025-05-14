@@ -1,0 +1,35 @@
+model:
+    name: softki
+    kernel:
+        _target_: RBFKernel
+        ard_num_dims: null
+        nu: 2.5
+    lengthscale: 1
+    use_scale: true
+    use_ard: true
+    num_inducing: 512
+    induce_init: kmeans
+    noise: 0.5
+    learn_noise: true
+    use_T: true
+    T: 1
+    learn_T: true
+    min_T: 0.00005
+    per_interp_T: false
+    threshold: 0.01
+    use_threshold: false
+    learn_threshold: false
+    solver: solve
+    cg_tolerance: 1e-5
+    mll_approx: hutchinson_fallback
+    fit_chunk_size: 1024
+    use_qr: true
+    hutch_solver: cg
+    dtype: float32
+    device: cpu
+
+training:
+    seed: 42
+    batch_size: 1024
+    learning_rate: 0.01
+    epochs: 50

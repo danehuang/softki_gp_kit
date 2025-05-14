@@ -1,0 +1,29 @@
+defaults:
+    - gp/dsoft_ki/config
+    - gp/dsvgp/config
+    - gp/ddsvgp/config
+    - gp/softki/config
+    - gp/svgp/config
+    - gp/sgpr/config
+    - gp/dexact_gp/config
+
+model: dsoftki
+
+data_dir: data/synthetic
+
+dataset:
+    name: branin
+    num_workers: 1
+    train_frac: 0.5
+    val_frac: 0.0
+
+synthetic:
+    N: 1000
+
+wandb:
+    watch: false
+    group: test
+    entity: test
+    project: test
+
+draw: false

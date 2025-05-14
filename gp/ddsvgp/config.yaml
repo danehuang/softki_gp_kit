@@ -1,0 +1,23 @@
+model:
+    name: ddsvgp
+    kernel:
+        _target_: RBFKernelDirectionalGrad
+        ard_num_dims: null
+    lengthscale: 1
+    use_scale: true
+    use_ard: false
+    num_inducing: 512
+    num_directions: 2
+    induce_init: kmeans
+    noise: 0.5
+    dtype: float32
+    device: cpu
+    mll_type: PLL
+
+training:
+    seed: 42
+    batch_size: 128
+    learning_rate: 0.1
+    epochs: 50
+    gamma: 0.1
+    lr_sched: null
