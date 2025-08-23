@@ -1,6 +1,6 @@
 # Soft Kernel Interpolation GP Kit
 
-This repository contains an implementation of SoftKI: scalable GP regression ([SoftKI Paper](https://arxiv.org/pdf/2410.21419)).
+This repository contains an implementation of SoftKI: scalable GP regression ([SoftKI Paper](https://openreview.net/pdf?id=U9b2FIjvWU)).
 
 
 ## Quick Start
@@ -28,7 +28,7 @@ python run.py model=softki data_dir=data/uci_datasets/uci_datasets dataset.name=
 
 | Name | Description |
 | :------------ |  :----------- |
-| `model` | Specifies which model `dsoftki`, `softki`, `svgp`, `dsvgp`, `ddsvgp`. |
+| `model` | Specifies which model `softki`, `svgp`, `sgpr`. |
 | `data_dir` |  Path to data (e.g., `data/synthetic`). |
 | `dataset.name ` |  Name of dataset (see scripts for names) |
 | `dataset.train_frac ` |  Fraction of dataset to use for training |
@@ -66,7 +66,7 @@ pip install -e .
 ## Citations
 
 
-1. [SoftKI](https://arxiv.org/pdf/2410.21419)
+1. [SoftKI](https://openreview.net/pdf?id=U9b2FIjvWU)
 ```
 @article{camano2024softki,
   title={High-Dimensional Gaussian Process Regression with Soft Kernel Interpolation},
