@@ -8,7 +8,8 @@ This repository contains an implementation of SoftKI: scalable GP regression ([S
 1. Create environment
 
 ```
-conda create --name softki_gp_kit python=3.12
+pyenv virtualenv 3.12 softki_gp
+pyenv activate softki_gp
 pip install -e .
 ```
 
@@ -52,7 +53,9 @@ python run.py model=softki data_dir=data/uci_datasets/uci_datasets dataset.name=
 ### Manually Install
 
 ```
-conda create --name softki_gp_kit python=3.12
+pyenv install 3.12
+pyenv virtualenv 3.12 softki_gp
+pyenv activate softki_gp
 
 pip install torch torchvision torchaudio
 pip install tqdm requests wandb
@@ -68,10 +71,11 @@ pip install -e .
 
 1. [SoftKI](https://openreview.net/pdf?id=U9b2FIjvWU)
 ```
-@article{camano2024softki,
-  title={High-Dimensional Gaussian Process Regression with Soft Kernel Interpolation},
-  author={Cama{\~n}o, Chris and Huang, Daniel},
-  journal={arXiv preprint arXiv:2410.21419},
-  year={2024}
+@article{camano2025softki,
+  title   = {High-Dimensional Gaussian Process Regression with Soft Kernel Interpolation},
+  author  = {Cama{\~n}o, Chris L and Huang, Daniel},
+  journal = {Transactions on Machine Learning Research},
+  year    = {2025},
+  url     = {https://openreview.net/forum?id=U9b2FIjvWU},
 }
 ```
